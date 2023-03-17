@@ -22,10 +22,10 @@ const Login = () => {
     // Navigate
     const navigate = useNavigate();
     return (
-        <div className=" lg:max-w-5xl mx-auto px-5">
+        <div className=" lg:max-w-5xl mx-auto p-10">
             <div className="flex justify-between items-center">
                 <Link to="/">
-                    <img src={logo} alt="" className="mt-10" />
+                    <img src={logo} alt="" />
                 </Link>
                 <h3 className="text-base font-medium lg:hidden">
                     Not member?{" "}
