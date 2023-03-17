@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/Subtract.png";
+import logo from "../../assets/Logo.png";
 import LoginSlider from "../../Components/Slider/LoginSlider";
 import SliderHelper from "../../Components/Slider/SliderHelper";
 
 const LoginCode = () => {
-    const [passwordShown, setPasswordShown] = useState(false);
-    const togglePassword = () => {
-        setPasswordShown(!passwordShown);
-    };
-
     // OTP Countdown
     const [countdown, setCountdown] = useState(10);
 
@@ -95,6 +90,7 @@ const LoginCode = () => {
                         />
                     </div>
                     <button
+                        onClick={() => navigate("/success")}
                         className="font-bold text-white bg-custom-blue rounded-lg w-full mt-10 py-3 disabled:bg-gray-500 disabled:cursor-not-allowed"
                         disabled={countdown === 0}
                     >

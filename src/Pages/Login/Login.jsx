@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GoEyeClosed } from "react-icons/go";
 import { RiEyeCloseLine } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/Subtract.png";
+import logo from "../../assets/Logo.png";
 import LoginSlider from "../../Components/Slider/LoginSlider";
 import SliderHelper from "../../Components/Slider/SliderHelper";
 
@@ -88,7 +88,7 @@ const Login = () => {
                                 </span>
                             </div>
                             <input
-                                disabled={!email.length && !password.length}
+                                disabled={!email.length || !password.length}
                                 onClick={() => navigate("/login-code")}
                                 type="submit"
                                 value="Next"
