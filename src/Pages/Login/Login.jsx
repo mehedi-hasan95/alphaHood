@@ -3,8 +3,8 @@ import { GoEyeClosed } from "react-icons/go";
 import { RiEyeCloseLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Subtract.png";
-import LoginSlider from "./LoginSlider";
-import SliderHelper from "./SliderHelper";
+import LoginSlider from "../../Components/Slider/LoginSlider";
+import SliderHelper from "../../Components/Slider/SliderHelper";
 
 const Login = () => {
     const [passwordShown, setPasswordShown] = useState(false);
@@ -24,8 +24,8 @@ const Login = () => {
                     </Link>
                 </h3>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-                <div className="md:w-96 mx-auto mt-20 lg:mt-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-20">
+                <div className="md:w-96 mx-auto mt-10 md:mt-48 lg:mt-0">
                     <h2 className="font-inter text-3xlm text-custom-black font-bold mb-10">
                         Welcome to <br />
                         Systempackage
