@@ -7,7 +7,7 @@
 -   Success page
 -   Fully Responsive
 
-## Page Discription
+## Page Description
 
 ## Login Page:
 
