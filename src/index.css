@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Inter, system-ui, sans-serif;
+    }
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+    background-color: #0858f7;
+}
+
+.swiper-slide:nth-child(2n) {
+    background-color: #0646c6;
+}
+
+.swiper-slide:nth-child(3n) {
+    background-color: #053594;
+}
+
+.mySwiper span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: white;
+}
+
+span.share.float-right.text-base {
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+}
