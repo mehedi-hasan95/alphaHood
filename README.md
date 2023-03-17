@@ -12,6 +12,7 @@
 ## Login Page:
 
 -   The login button will be disabled in the initial stage. Please provide your email and password otherwise you can't log in. After providing your email and password, click the "Next" button and proceed. You can proceed to the next step with the dummy email and password here.
+-   There is an eye image to the right of the password field when entering a password. You can click here to see what password you have entered. That is, you can change the field type dynamically.
 
 ## LoginCode Page:
 
