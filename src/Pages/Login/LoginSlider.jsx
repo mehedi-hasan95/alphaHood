@@ -11,7 +11,7 @@ import { Pagination, EffectCards, Autoplay } from "swiper";
 
 const LoginSlider = () => {
     return (
-        <div>
+        <div className="loginSlide">
             <Swiper
                 pagination={{
                     clickable: true,

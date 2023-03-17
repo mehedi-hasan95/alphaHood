@@ -12,12 +12,20 @@ const Login = () => {
         setPasswordShown(!passwordShown);
     };
     return (
-        <div className=" max-w-5xl mx-auto">
-            <Link to="/">
-                <img src={logo} alt="" className="mt-10" />
-            </Link>
-            <div className="grid grid-cols-2 items-center">
-                <div className=" w-96">
+        <div className=" lg:max-w-5xl mx-auto px-5">
+            <div className="flex justify-between items-center">
+                <Link to="/">
+                    <img src={logo} alt="" className="mt-10" />
+                </Link>
+                <h3 className="text-base font-medium lg:hidden">
+                    Not member?{" "}
+                    <Link to="/" className="text-custom-blue">
+                        Create account
+                    </Link>
+                </h3>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+                <div className="md:w-96 mx-auto mt-20 lg:mt-0">
                     <h2 className="font-inter text-3xlm text-custom-black font-bold mb-10">
                         Welcome to <br />
                         Systempackage
@@ -78,11 +86,11 @@ const Login = () => {
                         </div>
                     </form>
                 </div>
-                <div>
+                <div className=" hidden lg:block">
                     <LoginSlider />
                 </div>
             </div>
-            <h3 className="text-base font-medium">
+            <h3 className="text-base font-medium hidden lg:block">
                 Not member?{" "}
                 <Link to="/" className="text-custom-blue">
                     Create account

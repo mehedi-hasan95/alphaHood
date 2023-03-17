@@ -37,6 +37,14 @@
 
 span.share.float-right.text-base {
     position: absolute;
-    bottom: 10px;
-    right: 25px;
+    bottom: 25px;
+    right: 60px;
+}
+
+.loginSlide .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    width: 35%;
+    padding-bottom: 20px;
 }
