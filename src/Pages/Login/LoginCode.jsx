@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/Subtract.png";
 import LoginSlider from "../../Components/Slider/LoginSlider";
 import SliderHelper from "../../Components/Slider/SliderHelper";
@@ -9,6 +9,26 @@ const LoginCode = () => {
     const togglePassword = () => {
         setPasswordShown(!passwordShown);
     };
+
+    // OTP Countdown
+    const [countdown, setCountdown] = useState(10);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCountdown((countdown) => countdown - 1);
+        }, 1000);
+
+        if (countdown === 0) {
+            clearInterval(interval);
+        }
+
+        return () => clearInterval(interval);
+    }, [countdown]);
+
+    // Get back previous page
+    const navigate = useNavigate();
+
+    const mofifyCountdown = countdown.toString().padStart(2, "0");
     return (
         <div className=" lg:max-w-5xl mx-auto px-5">
             <div className="flex justify-between items-center">
@@ -74,10 +94,21 @@ const LoginCode = () => {
                             className=" outline-none shadow-sm border border-custom-blue focus:shadow-md focus:shadow-blue-600 rounded-xl text-center w-10 h-12"
                         />
                     </div>
+                    <button
+                        className="font-bold text-white bg-custom-blue rounded-lg w-full mt-10 py-3 disabled:bg-gray-500 disabled:cursor-not-allowed"
+                        disabled={countdown === 0}
+                    >
+                        Verify
+                    </button>
                     <div className="pt-10 flex justify-between items-center">
-                        <span className="font-bold text-custom-blue">Back</span>
+                        <span
+                            onClick={() => navigate(-1)}
+                            className="font-bold text-custom-blue cursor-pointer"
+                        >
+                            Back
+                        </span>
                         <span className="font-bold text-[#CACACE]">
-                            Resend 00:10
+                            Resend 00:{mofifyCountdown}
                         </span>
                     </div>
                 </div>
